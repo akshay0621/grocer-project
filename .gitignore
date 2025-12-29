@@ -1,0 +1,39 @@
+# Common
+node_modules/
+.env
+.env.local
+.env.*.local
+dist/
+build/
+*.log
+
+# VS Code
+.vscode/
+
+# Project Specific
+deploy.tar.gz
+notes.txt
+
+# Server
+server/node_modules/
+server/.env
+
+# Website Admin
+website-admin/node_modules/
+website-admin/.env
+website-admin/dist/
+website-admin/build/
+
+# Mobile User
+MobileUser/node_modules/
+MobileUser/.env
+MobileUser/.expo/
+MobileUser/android/build/
+MobileUser/ios/build/
+MobileUser/.bundle/
+MobileUser/vendor/bundle/
+MobileUser/*.log
+MobileUser/android/.gradle/
+MobileUser/android/app/build/
+MobileUser/ios/Pods/
+MobileUser/ios/DerivedData/
