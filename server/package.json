@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "serv": "nodemon server.js"
+    "serv": "nodemon server.js",
+    "test": "jest --runInBand --forceExit"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.14.1",
     "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^11.0.1",
+    "supertest": "^7.2.2"
   }
 }

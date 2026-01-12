@@ -74,6 +74,10 @@ app.use('/', get_future_items_routes);
 const change_password_routes = require('./src/routes/change_password_routes');
 app.use('/', change_password_routes);
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server listening on port ${PORT} and bound to 0.0.0.0`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server listening on port ${PORT} and bound to 0.0.0.0`);
+  });
+}
+
+module.exports = app;

@@ -40,6 +40,14 @@ const item_schema = new Schema({
   specific_date: {
     type: Date,
     required: false
+  },
+  date_added: {
+    type: Date,
+    default: Date.now
+  },
+  date_bought: {
+    type: Date,
+    required: false
   }
 }, { timestamps: true });
 

@@ -28,6 +28,9 @@ const ItemCard = ({ item, onBought, onDelete, loggedInUserName }) => {
                     <Text style={tw`text-xs text-gray-500 mt-1`}>
                         Description: {itemDescription}
                     </Text>
+                    <Text style={tw`text-xs text-gray-500 mt-1 font-semibold`}>
+                        Date Added: {new Date(item.date_added || item.createdAt).toLocaleDateString()}
+                    </Text>
 
                     {item.schedule_type === 'regular' && item.regular_days?.length > 0 && (
                         <View style={tw`bg-blue-50 px-2 py-1 rounded mt-2 self-start border border-blue-100`}>

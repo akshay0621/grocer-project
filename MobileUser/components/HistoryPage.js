@@ -104,8 +104,11 @@ const HistoryPage = ({ navigation, route }) => {
                                 <View style={tw`flex-1 mr-4`}>
                                     <Text style={tw`text-lg font-bold text-gray-800`}>{item.item_name}</Text>
                                     <Text style={tw`text-gray-600 text-sm`}>Quantity: {item.item_quantity}</Text>
-                                    <Text style={tw`text-[10px] text-gray-400 mt-2`}>
-                                        Bought {new Date(item.updatedAt).toLocaleDateString()} by {item.purchased_by || 'Unknown'}
+                                    <Text style={tw`text-[10px] text-gray-400 mt-2 font-bold`}>
+                                        Date Bought: {new Date(item.date_bought || item.updatedAt).toLocaleDateString()}
+                                    </Text>
+                                    <Text style={tw`text-[10px] text-gray-400 mt-1`}>
+                                        Bought by: {item.purchased_by || 'Unknown'}
                                     </Text>
                                 </View>
                                 <TouchableOpacity

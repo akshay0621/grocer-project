@@ -176,6 +176,8 @@ const ItemsPage = () => {
                   <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Description</th>
                   <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Purchased?</th>
                   <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Purchased By</th>
+                  <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Date Added</th>
+                  <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Date Bought</th>
                   <th className="py-3 px-4 border-b text-left text-xs font-medium text-gray-600 uppercase tracking-wider rounded-tr-lg">Actions</th>
                 </tr>
               </thead>
@@ -199,6 +201,12 @@ const ItemsPage = () => {
                     </td>
                     <td className="py-3 px-4 border-b text-sm text-gray-800">
                       {item.is_purchased ? (item.purchased_by || 'N/A') : 'Not yet'}
+                    </td>
+                    <td className="py-3 px-4 border-b text-sm text-gray-800">
+                      {new Date(item.date_added || item.createdAt).toLocaleDateString()}
+                    </td>
+                    <td className="py-3 px-4 border-b text-sm text-gray-800">
+                      {item.is_purchased ? (item.date_bought ? new Date(item.date_bought).toLocaleDateString() : 'N/A') : 'N/A'}
                     </td>
                     <td className="py-3 px-4 border-b">
                       <button

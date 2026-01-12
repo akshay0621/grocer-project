@@ -14,8 +14,10 @@ router.put('/mark_item_bought/:_id', async (req, res) => { // Using PUT for upda
         const updateData = { is_purchased: is_purchased };
         if (is_purchased && purchased_by) { // Only set purchased_by if item is being marked as purchased
             updateData.purchased_by = purchased_by;
+            updateData.date_bought = new Date();
         } else if (!is_purchased) { // If marking as not purchased, clear purchased_by
             updateData.purchased_by = null;
+            updateData.date_bought = null;
         }
 
         const updatedItem = await Item.findByIdAndUpdate(
