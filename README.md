@@ -2,6 +2,13 @@
 
 A comprehensive grocery management and delivery system consisting of a Backend Server, an Administration Dashboard, and a Mobile Application.
 
+## ✨ New Features
+
+- **Date Tracking**: Items now automatically track "Date Added" and "Date Bought" for better inventory and history management.
+- **Scheduled Items**: Reimagined "Future Items" tab into "Scheduled Items" for clearer planning.
+- **Improved Security**: Simplified password management for a smoother user experience.
+- **Robust UI**: Enhanced mobile and admin interfaces for better responsiveness and usability.
+
 ## Project Structure
 
 - **`server/`**: Node.js/Express backend with MongoDB. Handles API requests, authentication, and data management.
@@ -89,6 +96,30 @@ Follow these steps to set up the project locally.
 
 ---
 
+## 🧪 Testing
+
+The project includes a comprehensive testing suite across all modules.
+
+### Backend Tests
+```bash
+cd server
+npm test
+```
+
+### Mobile App Tests
+```bash
+cd MobileUser
+npm test
+```
+
+### Admin Dashboard Tests
+```bash
+cd website-admin
+npm test
+```
+
+---
+
 ## 🔒 Security & Privacy
 
 This repository uses a `.gitignore` file to ensure that `.env` files and other sensitive configuration data are not uploaded. Always use the provided `.env.example` templates for local configuration.
@@ -96,3 +127,4 @@ This repository uses a `.gitignore` file to ensure that `.env` files and other s
 ## 📄 License
 
 This project is for demonstration purposes.
+
